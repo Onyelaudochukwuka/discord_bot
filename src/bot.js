@@ -53,7 +53,7 @@ client.on('message', (message) => {
             if(key.length > 0){
             for(let i = 0; i < key.length ; i++){
                 if(message.content == key[i]){
-                    message.reply(keyContent[i]);
+                    message.reply(keyContent[i].join(" "));
                 }
             }
         
