@@ -28,7 +28,7 @@ client.on('message', (message) => {
             .substring(1)
             .split(/\s+/);
         if (CMD_NAME == 'store') {
-            if(args[0] && args[1]){
+            if(args[0] && args.slice(1)){
              key.push(args[0]);
               keyContent.push(args.slice(1));
                num = key.length;
