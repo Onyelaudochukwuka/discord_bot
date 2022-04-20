@@ -1,4 +1,7 @@
 //jshint esversion:6
+var bot = {};
+
+bot.init = () =>{
 require('dotenv').config();
 const {
     Client,
@@ -11,8 +14,8 @@ const PREFIX = "$";
 const key = [];
 const keyContent = []; 
 let num;
-client.login(process.env.DISCORDJS_BOT_TOKEN);
-client.on('ready', () => {
+client.login("OTY1ODQ1MzM1ODcwMTQ4Njg5.Yl5HkA.vBsc52hBOF0yJNSjuU7u6z-Ox58");
+client.on('ready', (message) => {
     console.log(`${client.user.tag} has logged in`);
 });
 client.on('message', (message) => {
@@ -25,9 +28,9 @@ client.on('message', (message) => {
             .substring(1)
             .split(/\s+/);
         if (CMD_NAME == 'store') {
-            if(args[0] && args[1]){
+            if(args[0] && args.slice(1)){
              key.push(args[0]);
-              keyContent.push(args[1]);
+              keyContent.push(args.slice(1));
                num = key.length;
             }else{
                 message.reply("Enter two parameters to store i.e key and content");
@@ -68,3 +71,6 @@ client.on('message', (message) => {
     client.on('guildMemberAdd',(member)=>{
         message.channel.send(`Welcome ${member.user.username}`);
     });
+};
+
+bot.init();
