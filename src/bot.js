@@ -14,7 +14,7 @@ const PREFIX = "$";
 const key = [];
 const keyContent = []; 
 let num;
-client.login("OTY1ODQ1MzM1ODcwMTQ4Njg5.Yl5HkA.vBsc52hBOF0yJNSjuU7u6z-Ox58");
+client.login(process.env.DISCORD_BOT_TOKEN);
 client.on('ready', (message) => {
     console.log(`${client.user.tag} has logged in`);
 });
