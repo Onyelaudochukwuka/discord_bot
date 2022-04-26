@@ -71,7 +71,6 @@ client.on('message', (message) => {
     client.on('guildMemberAdd',(member)=>{
         console.log(member);
         message.channel.send(`Welcome ${member.id} to De-indomitable Germosa`);
-);
     });
 };
 
