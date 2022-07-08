@@ -1,2 +1,3 @@
 # discord_bot
-A discord bot
+
+## A discord bot built with nodejs
